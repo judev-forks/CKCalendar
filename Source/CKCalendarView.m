@@ -310,6 +310,9 @@
             [self.delegate calendar:self configureDateItem:item forDate:date];
         }
 
+        [dateButton setBackgroundImage:item.backgroundImage
+                              forState:UIControlStateNormal];
+
         if (self.selectedDate && [self date:self.selectedDate isSameDayAsDate:date]) {
             [dateButton setTitleColor:item.selectedTextColor forState:UIControlStateNormal];
             dateButton.backgroundColor = item.selectedBackgroundColor;
